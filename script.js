@@ -19,16 +19,16 @@ function setup(){
   // this function will run once
   createCanvas(320, 240); // create a 320 x 240 pixel drawing canvas
   for(var i = 0; i < objects.length; i++) {
-   objects[i] = new UFO(random(width), random(height));
+   objects[i] = new FLOWER(random(width), random(height)); //object gets random position based on w,h
   }
 }
 
 
 function draw(){
   background(200); //light gray background
-  for(var i = 0; i < objects.length; i++) {
-    objects[i].move();
-    objects[i].display();
+  for(var i = 0; i < objects.length; i++) { //starts a loop 
+    objects[i].move(); //position update
+    objects[i].display(); //objects are drawn on canvas
   }
 
   

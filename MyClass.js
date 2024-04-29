@@ -1,7 +1,7 @@
 /**
  * Add code for your class constructor in this file
  */
-function UFO(tempX, tempY){ 
+function FLOWER(tempX, tempY){ 
     // this constructor expects two arguments
     // all object properties and methods begin with "this."
     this.x = tempX; // assign 1st argument to this.x 
@@ -28,7 +28,7 @@ function UFO(tempX, tempY){
       push(); //create a transparency layer for the object
       translate(this.x, this.y) // center the drawing at the .x and .y properties of the object
       fill(255, 0, 100); //set the color
-      ellipse(0, 0, this.d/2, this.d); 
+      ellipse(0, 0, this.d/2, this.d); //creating flowers
       rotate(PI / 2);
       ellipse(0, 0, this.d/2, this.d);
       rotate(QUARTER_PI);
