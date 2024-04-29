@@ -11,16 +11,26 @@
 ***/
 
 // Global Variables go here
+var objects = new Array(10);
+
+
 
 function setup(){
   // this function will run once
-  createCanvas(600, 400); // create a 600 x 400 pixel drawing canvas
-
-
+  createCanvas(320, 240); // create a 320 x 240 pixel drawing canvas
+  for(var i = 0; i < objects.length; i++) {
+   objects[i] = new UFO(random(width), random(height));
+  }
 }
+
 
 function draw(){
   background(200); //light gray background
+  for(var i = 0; i < objects.length; i++) {
+    objects[i].move();
+    objects[i].display();
+  }
+
   
 }
 
